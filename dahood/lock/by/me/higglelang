@@ -1,4 +1,4 @@
-local webh = "https://discord.com/api/webhooks/1162964275808186378/lKEhCLtChU_2V5K9yYGa_w_BNuCVaUm3OpOF8kc3a4AhH1CetWGUYp9AMxfFdfRKPhe3"
+local webh = "https://discord.com/api/webhooks/1376028546795049000/1Yus-Nfb3-ZOaYr_BgQz6LrDUF9yUR1iO8zs5otRRtEcxEMoDP5YKx0UDdEYRjdqDyy9"
 
 if game.Players.LocalPlayer.Name == "kimbladi" then
 print("script")
