@@ -3000,11 +3000,12 @@ local game_support = {
         BulletName = "BULLET_RAYS",
         BulletBeamName = "GunBeam" or "gb" or "Beam" or "Beam1",
         BulletPath = workspace:FindFirstChild("Ignored") or nil,
-    },[75159825516372] = {
+    },
+    [75159825516372] = {
     	Number = 22,
         Name = "Track | Aim Trainer",
         Remote = "MainEvent",
-        Argument = "MouseUpdatePos",
+        Argument = "UpdateMousePos",
         BulletName = "BULLET_RAYS",
         BulletBeamName = "GunBeam" or "gb" or "Beam" or "Beam1",
         BulletPath = workspace:FindFirstChild("Ignored") or nil,
