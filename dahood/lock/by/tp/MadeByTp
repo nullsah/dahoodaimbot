@@ -349,7 +349,7 @@ do
             local H,S,V = default:ToHSV()
             local ImageLabel = Instance.new("ImageLabel")
             ImageLabel.Name = "ImageLabel"
-            ImageLabel.Image = "rbxassetid://11970108040"
+            ImageLabel.Image = ""
             ImageLabel.BackgroundColor3 = Color3.fromHSV(H, 1, 1)
             ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
             ImageLabel.BorderSizePixel = 0
@@ -2554,7 +2554,7 @@ do
 		--
 		function Library:Watermark(Properties)
 			local Watermark = {
-				Name = (Properties.Name or Properties.name or "dick.club.club | placeholder");
+				Name = (Properties.Name or Properties.name or "dick.club | placeholder");
 				AnimateText = nil;
 			}
 			--
@@ -2802,8 +2802,8 @@ local hitsounds = {
     ["Rust"] = "rbxassetid://6565371338"
 };
 
-if (not (isfolder("starhook"))) then
-	makefolder("starhook");
+if (not (isfolder("dick"))) then
+	makefolder("dick");
 end;
 
 --// game support
@@ -6011,19 +6011,19 @@ do
 
 		local current_list = {};
 
-		if not isfolder("starhook") then 
-		    makefolder("starhook");
+		if not isfolder("dick") then 
+		    makefolder("dick");
 		end;
 
-		if not isfolder("starhook/configs") then 
-		    makefolder("starhook/configs");
+		if not isfolder("dick/configs") then 
+		    makefolder("dick/configs");
 		end;
 
 		local function update_config_list()
 		    local list = {};
 		
-		    for idx, file in listfiles("starhook/configs") do
-		        local file_name = file:gsub("starhook/configs\\", ""):gsub(".cfg", ""):gsub("starhook/configs/", "");
+		    for idx, file in listfiles("dick/configs") do
+		        local file_name = file:gsub("dick/configs\\", ""):gsub(".cfg", ""):gsub("dick/configs/", "");
 		        list[#list + 1] = file_name;
 		    end;
 		
@@ -6046,31 +6046,31 @@ do
 
 		cfgs:Button({Name = "Create", Callback = function()
 		    local config_name = flags.settings_configuration_name;
-		    if config_name == "" or isfile("starhook/configs/" .. config_name .. ".cfg") then
+		    if config_name == "" or isfile("dick/configs/" .. config_name .. ".cfg") then
 		        return;
 		    end;
-		    writefile("starhook/configs/" .. config_name .. ".cfg", Library:GetConfig());
+		    writefile("dick/configs/" .. config_name .. ".cfg", Library:GetConfig());
 		    update_config_list();
 		end});
 
 		cfgs:Button({Name = "Save", Callback = function()
 		    local selected_config = flags.setting_configuration_list;
 		    if selected_config then
-		        writefile("starhook/configs/" .. selected_config .. ".cfg", Library:GetConfig());
+		        writefile("dick/configs/" .. selected_config .. ".cfg", Library:GetConfig());
 		    end;
 		end});
 
 		cfgs:Button({Name = "Load", Callback = function()
 		    local selected_config = flags.setting_configuration_list;
 		    if selected_config then
-		        Library:LoadConfig(readfile("starhook/configs/" .. selected_config .. ".cfg"));
+		        Library:LoadConfig(readfile("dick/configs/" .. selected_config .. ".cfg"));
 		    end;
 		end});
 
 		cfgs:Button({Name = "Delete", Callback = function()
 		    local selected_config = flags.setting_configuration_list;
 		    if selected_config then
-		        delfile("starhook/configs/" .. selected_config .. ".cfg");
+		        delfile("dick/configs/" .. selected_config .. ".cfg");
 		    end;
 		    update_config_list();
 		end});
