@@ -3006,9 +3006,7 @@ local game_support = {
         Name = "Track | Aim Trainer",
         Remote = "MainEvent",
         Argument = "UpdateMousePos",
-        BulletName = "BULLET_RAYS",
         BulletBeamName = "GunBeam" or "gb" or "Beam" or "Beam1",
-        BulletPath = workspace:FindFirstChild("Ignored") or nil,
     },
 }; --// Credits to farzad
 --// Credit to atzlazyblue (not dev) mf did 82% of the supportment
