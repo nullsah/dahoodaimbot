@@ -1,11 +1,12 @@
 -- Made by tpft
 repeat wait() until game:IsLoaded()
 
-
+-- bypass
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/adoniscries/main/Source.lua"))()
 
 if game:IsLoaded() then
 
+-- start/library
 local Drawing = loadstring(game:HttpGet("https://raw.githubusercontent.com/linemaster2/storage/main/Drawing.lua"))();
 
 local Library = {};
