@@ -348,7 +348,7 @@ do
             local H,S,V = default:ToHSV()
             local ImageLabel = Instance.new("ImageLabel")
             ImageLabel.Name = "ImageLabel"
-            ImageLabel.Image = ""
+            ImageLabel.Image = "rbxassetid://11970108040"
             ImageLabel.BackgroundColor3 = Color3.fromHSV(H, 1, 1)
             ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
             ImageLabel.BorderSizePixel = 0
